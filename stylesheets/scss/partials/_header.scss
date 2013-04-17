@@ -17,6 +17,44 @@
 	}
 }
 
+.site-logo {
+	position: relative;
+}
+
+.site-logo h2 {
+	position: absolute;
+	/*top: 10px;*/
+	/*left: 20px;*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 0 0 0.7em;
+	margin: 0 0 0 0;
+}
+
+.site-logo h2 span {
+	color: white;
+	/*font: bold 38px/58px Helvetica Neue, Sans-Serif;*/
+	font-family: Helvetica Neue, Sans-Serif;
+	font-weight: bold;
+	font-size: 2.0em;
+	line-height: 2.5;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0); /* fallback colour */
+	background: rgba(0, 0, 0, 0.5	);
+	padding: 10px;
+}
+
+@media only screen and (max-width: 320px) {
+	.site-logo h2 {
+		padding: 0 0 0 0.2em;
+	}
+	
+	.site-logo h2 span {
+		font-size: 1.0em;
+	}
+}
+
 #site-nav {
 	float: right;
 	position: relative;
@@ -60,14 +98,14 @@
 		}
 	}
 	.rss {
-		margin-top:-15px;
+		margin-top:-230px;
 		a { 
 			background:$color-accent inline-image('rss.svg') no-repeat center center;	
 			background-size:50%;
 		}
 	}
 	.twitter {
-		margin-top:50px;
+		margin-top:-170px;
 		a { 
 			background:$color-accent inline-image('twitter.svg') no-repeat center center;
 			background-size:60%;

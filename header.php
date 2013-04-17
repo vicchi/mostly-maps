@@ -34,7 +34,49 @@
 <body id="page" <?php body_class(); ?>>
 <div class='container'>
 	<header id="page-header" class="row">
+		<!--
 		<h1 id="site-title" class='three columns'><a href="/">Some Random Dude</a></h1>
+		-->
+		<?php
+		$header_image = get_header_image();
+		if ($header_image) :
+			if (function_exists('get_custom_header')) {
+				$header_image_width = get_theme_support('custom-header', 'width');
+			}
+			else {
+				$header_image_width = HEADER_IMAGE_WIDTH;
+			}
+		?>
+		<a href="<?php echo esc_url(home_url('/')); ?>">
+		<?php
+			if (is_singular() && has_post_thumbnail($post->ID) &&
+					($image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),
+						array($header_image_width, $header_image_width))) &&
+					$image[1] >= $header_image_width) :
+		?>
+				<div class="site-logo">
+					<?php echo get_the_post_thumbnail($post->ID, 'post-thumbnail'); ?>
+					<h2><span><?php bloginfo('name'); ?></span></h2>
+				</div>
+		<?php
+			else :
+				if (function_exists('get_custom_header')) {
+					$header_image_width = get_custom_header()->width;
+					$header_image_height = get_custom_header()->height;
+				}
+				else {
+					$header_image_width = HEADER_IMAGE_WIDTH;
+					$header_image_height = HEADER_IMAGE_HEIGHT;
+				}
+		?>
+				<div class="site-logo">
+					<img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" />
+					<h2><span><?php bloginfo('name'); ?></span></h2>
+				</div>
+			<?php endif; ?>
+		</a>
+		<?php endif; ?>
+
 		<nav id="site-nav" class='nine columns'>
 			<ul id="menu-primary" class="menu"><li><a href="/work/">Work</a></li>
 			<li class="last"><a href="/hello/" rel="author">Hello</a></li>

@@ -2,11 +2,48 @@
 #add_action('wp_enqueue_scripts', 'frank_enqueue_scripts');
 #add_action('wp_enqueue_scripts', 'frank_enqueue_scripts');
 
-require_once('admin/srd-theme-options.php');
+require_once get_template_directory() . '/admin/frank-theme-options.php';
+
 if (!is_admin()) {  
 	add_action('init', 'frank_enqueue_scripts');
 	add_action('init', 'frank_enqueue_styles');  
 }  
+
+$custom_header_support = array(
+	'default-image' => '%2$s/images/header/teddington-here.png',
+	'default-text-color'     => '3D302F',
+	'flex-height'            => true,
+	'wp-head-callback'       => 'frank_header_style',
+	'admin-head-callback'    => 'frank_admin_header_style',
+	'admin-preview-callback' => 'frank_admin_header_image',
+	'uploads' => true,
+	'random-default' => true
+);
+
+add_theme_support('custom-header', $custom_header_support);
+
+register_default_headers(array(
+	'here' => array(
+		'url' => '%2$s/images/header/teddington-here.png',
+		'thumbnail_url' => '%2$s/images/header/thumbnail/teddington-here-thumb.png',
+		'description' => __('HERE')
+		),
+	'google' => array(
+		'url' => '%2$s/images/header/teddington-google.png',
+		'thumbnail_url' => '%2$s/images/header/thumbnail/teddington-google-thumb.png',
+		'description' => __('Google')
+		),
+	'toner' => array(
+		'url' => '%2$s/images/header/teddington-toner.png',
+		'thumbnail_url' => '%2$s/images/header/thumbnail/teddington-toner-thumb.png',
+		'description' => __('Stamen Toner')
+		),
+	'watercolor' => array(
+		'url' => '%2$s/images/header/teddington-watercolor.png',
+		'thumbnail_url' => '%2$s/images/header/thumbnail/teddington-watercolor-thumb.png',
+		'description' => __('Stamen Watercolor')
+		),
+	));
 
 function frank_init() {
 	wp_deregister_script( 'l10n' );
