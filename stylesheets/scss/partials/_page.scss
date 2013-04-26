@@ -209,40 +209,33 @@
 	text-decoration: none;
 	width:100%;
 	height: 120px;
-	background-image: url("/wp-content/images/pages/projects/projects_sprite.png"); 
+	background-image: url("images/code-sprite.png");
 	}
 
 
 #projects_list {
-	#projects_bitcons {
+	#code-mxn {
 		background-position: 0 0; 
 	}
-	#projects_sanscons {
+	#code-wp-biographia {
 		background-position-y: -120px; 
 	}
-	#projects_photography {
+	#code-wp-quadratum {
 		background-position-y: -240px; 
 	}
-	#projects_offfranklin {
+	#code-wp-scs {
 		background-position-y: -360px; 
 	}
-	#projects_iconic {
+	#code-wp-avertere {
 		background-position-y: -480px; 
-	}
-	#projects_iconic {
-		background-position-y: -480px; 
-	}
-	#projects_coffeesleeve {
+	}#code-wp-na {
 		background-position-y: -600px; 
 	}
-	#projects_coordy {
+	#code-maps {
 		background-position-y: -720px; 
 	}
-	#cue {
+	#code-ps {
 		background-position-y: -840px; 
-	}
-	#projects_frank {
-		background-position-y: -960px; 
 	}
 	h3 {
 		position: relative;

@@ -80,7 +80,9 @@
 		<nav id="site-nav" class='nine columns'>
 			<ul id="menu-primary" class="menu">
 				<li><a href="/">Home</a></li>
+				<li><a href="/about" target="_blank">About</a></li>
 				<li><a href="/codeage">Code</a></li>
+				<li><a href="http:///maps.geotastic.org/" target="_blank">Maps</a></li>
 				<li><a href="/disclaimer">Disclaimer</a></li>
 				<li><a href="/speaking">Conferences</a></li>
 				<li class="last"><a href="http://here.com/" target="_blank">Work</a></li>
