@@ -1,3 +1,11 @@
 .post-content li {
 	margin-left: 4.4%;
 }
+
+.geo, .credits {
+	font: $font-weight-light #{$font-size-small}/1.25 #{$typeface-secondary};	
+}
+
+.geo {
+	padding-bottom: 10px;
+}
