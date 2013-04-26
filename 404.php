@@ -33,6 +33,8 @@
 					</p>
 					<?php get_search_form(); ?>
 				</div>
+				
+				<!-- TODO
 				<section id="other_projects" class='row'>
 				<h1>Projects of Interest</h1>
 				<ul id='projects_list' class='row'>
@@ -41,6 +43,7 @@
 				<li class='three columns design_technology'><div><h3><a href="/work/off-franklin-tumblr-theme/" id="projects_offfranklin"><small>Off Franklin Tumblr theme</small></a></h3><p>The theme is intended for media, such as videos and images, yet still flexible to handle all other content.</p></div></li>
 				<li class='three columns design'><div><h3><a href="/work/sanscons/" id="projects_sanscons"><small>Sanscons</small></a></h3><p>Sanscons is a CSS-friendly version of Bitcons — allowing you to set custom backgrounds on your icons.</p></div></li>
 				</ul>
+				-->
 			</section>
 		</div>
 	</div>
